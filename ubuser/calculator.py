@@ -38,4 +38,30 @@ def runOperation(operation, num1, num2):
         print("I don't understand.")
 
 def main():
-    
+    # Allow user to run basic calculator operations with two numbers
+    user_continue = True
+    while user_continue:
+        validInput = False
+        while not validInput:
+            # Get user input
+            try :
+                num1 = int(input("What is number 1? "))
+                num2 = int(input("What is number 2? "))
+                operation = int(input("What do you want to do? 1. add, 2. substract, 3. multiply, "
+                                      "or 4. divide. Enter number: "))
+                validInput = True
+            except ValueError:
+                print("Invalid input. Try again.")
+            except:
+                print("Unknown Error")
+            runOperation(operation, num1, num2)
+            user_yn = input('Would you like to run another calculation? ("y" for yes or '
+                            'any other value to exit)')
+            if (user_yn != 'y'):
+                user_continue = False
+                break
+            else:
+                continue
+
+if __name__ == "__main__":
+    main()
