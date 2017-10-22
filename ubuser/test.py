@@ -8,10 +8,11 @@ cd = 'wfvjnkqwe'
 
 #print(gh.upper())
 
-rec = ('~/Documents/mbox.txt')
+rec = ('/home/ubuser/Documents/mbox.txt')
 fh = open(rec)
 for line in fh:
     print(line)
+
 
 
 
