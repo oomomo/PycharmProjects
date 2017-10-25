@@ -18,3 +18,5 @@ def judge(player, computer):
         return 'Lose'
     else:
         return 'Win'
+
+"""This is a test."""
